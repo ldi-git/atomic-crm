@@ -1,0 +1,17 @@
+{
+  "id": "8aj",
+  "title": "Confirm npx supabase status -o json output shape",
+  "description": "## Objective\nResolve open question from the spec: exact field names in supabase status JSON output. Don't guess — run it and read.\n\n## Spec Reference\n.devmeta/projects/2026-05-21-seeder-scaffold/2026-05-21-seeder-scaffold-spec.md — Section: Step 3 / Open questions\n\n## Scope\n**Files:** none modified yet — research task. Findings get pasted into context-log.md.\n\n## Implementation\n1. Ensure Supabase is running locally (make start-supabase if not)\n2. Run: npx supabase status -o json\n3. Capture the actual JSON shape — note the exact key names for the API URL and the service-role key\n4. Append a short note to .devmeta/projects/2026-05-21-seeder-scaffold/context-log.md with the discovered field names so the next task can write a correct parser\n\n## Tests\nRun: npx supabase status -o json (must produce valid JSON; non-zero exit means Supabase isn't running — start it)\nDo NOT close until the JSON output is captured and field names documented in context-log.md.",
+  "status": "open",
+  "priority": 2,
+  "type": "task",
+  "owner": "lars.dideriksen@geomatic.dk",
+  "blocked_by": [
+    "cah"
+  ],
+  "parent": "qm6",
+  "acceptance_criteria": "Field names for API URL and service-role key documented in context-log.md",
+  "created_by": "lars.dideriksen@geomatic.dk",
+  "created_at": "2026-05-21T09:03:17.4527695Z",
+  "updated_at": "2026-05-21T09:03:17.4527695Z"
+}

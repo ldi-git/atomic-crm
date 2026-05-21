@@ -1,0 +1,17 @@
+{
+  "id": "ug1",
+  "title": "Write scripts/seed-supabase.ts skeleton",
+  "description": "## Objective\nCreate the seeder entry point with local-URL guard, service-key resolution, clean-DB precondition, and smoke-test insert into tags.\n\n## Spec Reference\n.devmeta/projects/2026-05-21-seeder-scaffold/2026-05-21-seeder-scaffold-spec.md — Section: Step 2\n\n## Scope\n**Files:** scripts/seed-supabase.ts — NEW\n\n## Implementation\n1. Import createClient from @supabase/supabase-js, execa from execa\n2. resolveLocalSupabase() that prefers SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY env vars, falls back to parsing npx supabase status -o json (use the field names confirmed in the previous task)\n3. main() flow: resolve → host check (must be 127.0.0.1 or localhost — error otherwise) → build supabase client with service-role key → clean-DB precondition (count companies; error if any rows) → smoke-test insert one row into tags (name='__seed_smoke_test__', color='#000000') → log OK\n4. Top-level catch that logs the error and exits non-zero\n5. Make sure imports / TypeScript syntax type-check cleanly\n\n## Tests\nRun: npx tsc --noEmit scripts/seed-supabase.ts (or npm run typecheck if the script is included)\nRun: npm run typecheck\nDo NOT close until typecheck passes.",
+  "status": "open",
+  "priority": 2,
+  "type": "task",
+  "owner": "lars.dideriksen@geomatic.dk",
+  "blocked_by": [
+    "8aj"
+  ],
+  "parent": "qm6",
+  "acceptance_criteria": "scripts/seed-supabase.ts exists; npm run typecheck passes",
+  "created_by": "lars.dideriksen@geomatic.dk",
+  "created_at": "2026-05-21T09:03:27.8070051Z",
+  "updated_at": "2026-05-21T09:03:27.8070051Z"
+}

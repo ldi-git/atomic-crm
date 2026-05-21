@@ -1,0 +1,12 @@
+{
+  "id": "5xi",
+  "title": "Iteration 1.1: Seeder scaffold + Makefile",
+  "description": "Create scripts/seed-supabase.ts skeleton with local-URL guard, clean-DB precondition, service-role key from supabase status, smoke-test insert. Add make seed target to Makefile chaining supabase-reset-database + seeder. Add tsx as dev dep. See .devmeta/increments/increment-1-kpv/_overview.md for full details.",
+  "status": "open",
+  "priority": 2,
+  "type": "epic",
+  "owner": "lars.dideriksen@geomatic.dk",
+  "created_by": "lars.dideriksen@geomatic.dk",
+  "created_at": "2026-05-21T08:59:47.793504Z",
+  "updated_at": "2026-05-21T08:59:47.793504Z"
+}

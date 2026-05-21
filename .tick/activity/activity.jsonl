@@ -1,0 +1,19 @@
+{"ts":"2026-05-21T08:59:47.7957041Z","tick":"5xi","action":"create","actor":"lars.dideriksen@geomatic.dk","data":{"priority":2,"title":"Iteration 1.1: Seeder scaffold + Makefile","type":"epic"}}
+{"ts":"2026-05-21T08:59:52.6559855Z","tick":"bzh","action":"create","actor":"lars.dideriksen@geomatic.dk","data":{"priority":2,"title":"Iteration 1.1R: Inspect \u0026 Adapt on Iteration 1.1","type":"epic"}}
+{"ts":"2026-05-21T08:59:58.3992084Z","tick":"3a3","action":"create","actor":"lars.dideriksen@geomatic.dk","data":{"priority":2,"title":"Iteration 1.2: Auth users + sales reps","type":"epic"}}
+{"ts":"2026-05-21T09:00:02.6343199Z","tick":"742","action":"create","actor":"lars.dideriksen@geomatic.dk","data":{"priority":2,"title":"Iteration 1.2R: Inspect \u0026 Adapt on Iteration 1.2","type":"epic"}}
+{"ts":"2026-05-21T09:00:10.2050387Z","tick":"hte","action":"create","actor":"lars.dideriksen@geomatic.dk","data":{"priority":2,"title":"Iteration 1.3: CRM data + funnel + edge cases","type":"epic"}}
+{"ts":"2026-05-21T09:00:15.3379352Z","tick":"pnq","action":"create","actor":"lars.dideriksen@geomatic.dk","data":{"priority":2,"title":"Iteration 1.3R: Inspect \u0026 Adapt on Iteration 1.3, close increment","type":"epic"}}
+{"ts":"2026-05-21T09:02:55.733992Z","tick":"qm6","action":"create","actor":"lars.dideriksen@geomatic.dk","epic":"5xi","data":{"priority":2,"title":"1.1: Bootstrap seeder + Makefile","type":"epic"}}
+{"ts":"2026-05-21T09:03:08.4100048Z","tick":"cah","action":"create","actor":"lars.dideriksen@geomatic.dk","epic":"qm6","data":{"priority":2,"title":"Add tsx and @supabase/supabase-js to devDependencies","type":"task"}}
+{"ts":"2026-05-21T09:03:17.4548364Z","tick":"8aj","action":"create","actor":"lars.dideriksen@geomatic.dk","epic":"qm6","data":{"priority":2,"title":"Confirm npx supabase status -o json output shape","type":"task"}}
+{"ts":"2026-05-21T09:03:27.8092852Z","tick":"ug1","action":"create","actor":"lars.dideriksen@geomatic.dk","epic":"qm6","data":{"priority":2,"title":"Write scripts/seed-supabase.ts skeleton","type":"task"}}
+{"ts":"2026-05-21T09:03:35.6847544Z","tick":"get","action":"create","actor":"lars.dideriksen@geomatic.dk","epic":"qm6","data":{"priority":2,"title":"Add make seed target to Makefile","type":"task"}}
+{"ts":"2026-05-21T09:03:46.0363269Z","tick":"mhx","action":"create","actor":"lars.dideriksen@geomatic.dk","epic":"qm6","data":{"priority":2,"title":"Verify make seed end-to-end + negative paths","type":"task"}}
+{"ts":"2026-05-21T09:03:55.3427081Z","tick":"aql","action":"create","actor":"lars.dideriksen@geomatic.dk","epic":"qm6","data":{"priority":2,"title":"Re-ground after Feature 1.1.A","type":"task"}}
+{"ts":"2026-05-21T09:04:04.0965527Z","tick":"ccq","action":"create","actor":"lars.dideriksen@geomatic.dk","epic":"5xi","data":{"priority":2,"title":"Create PR for iteration 1.1","type":"task"}}
+{"ts":"2026-05-21T09:04:10.6299476Z","tick":"kyj","action":"create","actor":"lars.dideriksen@geomatic.dk","epic":"5xi","data":{"priority":2,"title":"Merge PR and return to base branch","type":"task"}}
+{"ts":"2026-05-21T09:04:17.6771935Z","tick":"me8","action":"create","actor":"lars.dideriksen@geomatic.dk","epic":"5xi","data":{"priority":2,"title":"Commit metadata to course-main","type":"task"}}
+{"ts":"2026-05-21T09:04:25.7792599Z","tick":"ezd","action":"create","actor":"lars.dideriksen@geomatic.dk","epic":"5xi","data":{"priority":2,"title":"Kick off I\u0026A Cycle 1.1R","type":"task"}}
+{"ts":"2026-05-21T09:04:31.7861671Z","tick":"0r9","action":"create","actor":"lars.dideriksen@geomatic.dk","epic":"bzh","data":{"priority":2,"title":"Run /devmeta:reflect 1.1","type":"task"}}
+{"ts":"2026-05-21T09:04:40.831015Z","tick":"1bl","action":"create","actor":"lars.dideriksen@geomatic.dk","epic":"bzh","data":{"priority":2,"title":"Plan Iteration 1.2: read scope, create feature tick structure, begin first task","type":"task"}}

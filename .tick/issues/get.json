@@ -1,0 +1,17 @@
+{
+  "id": "get",
+  "title": "Add make seed target to Makefile",
+  "description": "## Objective\nWire up the make target. make seed should chain supabase-reset-database then run the seeder.\n\n## Spec Reference\n.devmeta/projects/2026-05-21-seeder-scaffold/2026-05-21-seeder-scaffold-spec.md — Section: Step 4\n\n## Scope\n**Files:** Makefile — add new seed target near supabase-reset-database (around line 28)\n\n## Implementation\n1. Add this near the existing supabase-reset-database target:\n     seed: supabase-reset-database ## reset DB and load demo seed data\n     \tnpx tsx scripts/seed-supabase.ts\n2. Make sure indentation uses a TAB, not spaces (Makefile requirement)\n3. Keep supabase-reset-database untouched — both targets must work independently\n\n## Tests\nRun: make help (should now list seed in the help output)\nRun: make supabase-reset-database (should still work — schema-only reset)\nDo NOT close until both pass.",
+  "status": "open",
+  "priority": 2,
+  "type": "task",
+  "owner": "lars.dideriksen@geomatic.dk",
+  "blocked_by": [
+    "ug1"
+  ],
+  "parent": "qm6",
+  "acceptance_criteria": "make help lists seed; make supabase-reset-database still works",
+  "created_by": "lars.dideriksen@geomatic.dk",
+  "created_at": "2026-05-21T09:03:35.6825281Z",
+  "updated_at": "2026-05-21T09:03:35.6825281Z"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ezd",
+  "title": "Kick off I\u0026A Cycle 1.1R",
+  "description": "## Objective\nBoundary task. Unblocks the I\u0026A cycle iteration (1.1R, id bzh). Closing this task transitions execution from iteration 1.1 to 1.1R.\n\n## Implementation\nNothing to do beyond closing this task. tk next will pick up 1.1R automatically.",
+  "status": "open",
+  "priority": 2,
+  "type": "task",
+  "owner": "lars.dideriksen@geomatic.dk",
+  "blocked_by": [
+    "me8"
+  ],
+  "parent": "5xi",
+  "acceptance_criteria": "Task closed; iteration 1.1R is the next ready epic",
+  "created_by": "lars.dideriksen@geomatic.dk",
+  "created_at": "2026-05-21T09:04:25.7760045Z",
+  "updated_at": "2026-05-21T09:04:25.7760045Z"
+}
