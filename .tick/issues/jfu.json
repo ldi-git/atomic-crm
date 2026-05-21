@@ -2,7 +2,7 @@
   "id": "jfu",
   "title": "Add computeWeightedTotal helper to dealUtils.ts",
   "description": "## Objective\nAdd a pure helper `computeWeightedTotal(deals, probability)` that returns `sum(amounts) × probability`, defensively coercing non-finite probability to 0.\n\n## Spec Reference\n`.devmeta/projects/2026-05-21-stage-probability/2026-05-21-stage-probability-spec.md` — Section: \"Helper signature\"\n\n## Scope\n**Files:** `src/components/atomic-crm/deals/dealUtils.ts` — append a new exported function. Do NOT touch `findDealLabel`, date utils, or other exports.\n\n## Implementation\n1. At the end of dealUtils.ts add:\n   ```ts\n   export function computeWeightedTotal(\n     deals: { amount: number }[],\n     probability: number,\n   ): number {\n     const safeProbability = Number.isFinite(probability) ? probability : 0;\n     const totalAmount = deals.reduce((sum, deal) =\u003e sum + deal.amount, 0);\n     return totalAmount * safeProbability;\n   }\n   ```\n2. Parameter type is `{ amount: number }[]` (structural) on purpose — see context-log \"Helper input type\".\n\n## Tests\nRun: `npm run typecheck`\nExpected: passes. Behaviour is verified by the next task.",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "type": "task",
   "owner": "lars.dideriksen@geomatic.dk",
@@ -13,5 +13,7 @@
   "acceptance_criteria": "npm run typecheck passes and computeWeightedTotal is exported from dealUtils.ts",
   "created_by": "lars.dideriksen@geomatic.dk",
   "created_at": "2026-05-21T09:58:29.8320117Z",
-  "updated_at": "2026-05-21T09:58:29.8320117Z"
+  "updated_at": "2026-05-21T10:04:22.4846323Z",
+  "closed_at": "2026-05-21T10:04:22.4846323Z",
+  "closed_reason": "computeWeightedTotal exported from dealUtils.ts with defensive Number.isFinite guard. Typecheck clean."
 }

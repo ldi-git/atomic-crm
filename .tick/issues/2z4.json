@@ -2,12 +2,14 @@
   "id": "2z4",
   "title": "2.1.A: Stage probability + weighted column total",
   "description": "## Scope\nAdd probability field to DealStage, populate defaults, factor weighted-total into a pure helper with Vitest tests, render weighted total as primary in DealColumn header with raw sum on hover.\n\n## Spec\n.devmeta/projects/2026-05-21-stage-probability/2026-05-21-stage-probability-spec.md\n\n## Worker Instructions\n- Complete tasks in order (each depends on the previous).\n- Read .devmeta/projects/2026-05-21-stage-probability/context-log.md before starting.\n- Read .devmeta/lessons-learned.md before starting.\n- Append learnings to context-log.md when done.",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "type": "epic",
   "owner": "lars.dideriksen@geomatic.dk",
   "parent": "1x7",
   "created_by": "lars.dideriksen@geomatic.dk",
   "created_at": "2026-05-21T09:58:02.6899553Z",
-  "updated_at": "2026-05-21T09:58:02.6899553Z"
+  "updated_at": "2026-05-21T10:09:22.3896452Z",
+  "closed_at": "2026-05-21T10:09:22.3896452Z",
+  "closed_reason": "All feature tasks complete. Feature 2.1.A delivered: stage probability + weighted column total."
 }

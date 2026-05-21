@@ -2,7 +2,7 @@
   "id": "1el",
   "title": "Populate defaultDealStages with probabilities",
   "description": "## Objective\nAdd the agreed `probability` value to every entry in `defaultDealStages` so the new required field is satisfied at compile time.\n\n## Spec Reference\n`.devmeta/projects/2026-05-21-stage-probability/2026-05-21-stage-probability-spec.md` — Section: \"Architecture / Files to modify\"\n\n## Scope\n**Files:** `src/components/atomic-crm/root/defaultConfiguration.ts` — only `defaultDealStages`.\n\n## Implementation\nUpdate each entry in `defaultDealStages` to include `probability`:\n- opportunity → 0.10\n- proposal-sent → 0.50\n- in-negociation → 0.75\n- won → 1.00\n- lost → 0.00\n- delayed → 0.25\n\nKeep existing order and `value` / `label` text unchanged.\n\n## Tests\nRun: `npm run typecheck`\nExpected: passes (no DealStage construction-sites remain broken).",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "type": "task",
   "owner": "lars.dideriksen@geomatic.dk",
@@ -13,5 +13,7 @@
   "acceptance_criteria": "npm run typecheck passes",
   "created_by": "lars.dideriksen@geomatic.dk",
   "created_at": "2026-05-21T09:58:20.5701243Z",
-  "updated_at": "2026-05-21T09:58:20.5701243Z"
+  "updated_at": "2026-05-21T10:03:42.6356799Z",
+  "closed_at": "2026-05-21T10:03:42.6356799Z",
+  "closed_reason": "All six default stages now carry probability (0.10 / 0.50 / 0.75 / 1.0 / 0.0 / 0.25). npm run typecheck clean."
 }

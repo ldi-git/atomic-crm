@@ -2,7 +2,7 @@
   "id": "6tu",
   "title": "Wire DealColumn header to render weighted total + raw on hover",
   "description": "## Objective\nReplace the column header's raw-sum display with the weighted total, computed via `computeWeightedTotal`. Keep the existing compact-currency formatter. Expose the raw sum via a `title` attribute on the figure. Always render, even when the value is 0.\n\n## Spec Reference\n`.devmeta/projects/2026-05-21-stage-probability/2026-05-21-stage-probability-spec.md` — Section: \"DealColumn changes\"\n\n## Scope\n**Files:** `src/components/atomic-crm/deals/DealColumn.tsx` — only the header `\u003cp\u003e`. Do NOT touch the Droppable / DealCard rendering or the parent layout.\n\n## Implementation\n1. Import `computeWeightedTotal` from `./dealUtils`.\n2. Inside the component:\n   - Look up the current stage entry: `const stageEntry = dealStages.find((s) =\u003e s.value === stage);`\n   - Keep the existing raw sum reducer (it is still needed for the hover tooltip).\n   - Compute `const weightedAmount = computeWeightedTotal(deals, stageEntry?.probability ?? 0);`.\n   - Extract a small `fmt` function (or inline) using the existing toLocaleString options.\n3. Render the `\u003cp\u003e` with:\n   - text content = `fmt(weightedAmount)`\n   - `title={\\\"Raw total: \\\" + fmt(rawAmount)}`\n4. No conditional hiding — render even when weightedAmount is 0.\n\n## Tests\nRun: `npm run typecheck \u0026\u0026 npm run lint`\nExpected: both pass.\nManual: `make start-demo` and open /deals — each column header shows the weighted total, hover reveals raw total.",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "type": "task",
   "owner": "lars.dideriksen@geomatic.dk",
@@ -13,5 +13,7 @@
   "acceptance_criteria": "npm run typecheck and npm run lint both pass; DealColumn.tsx renders weighted total with raw on hover via title attribute",
   "created_by": "lars.dideriksen@geomatic.dk",
   "created_at": "2026-05-21T09:58:56.7694498Z",
-  "updated_at": "2026-05-21T09:58:56.7694498Z"
+  "updated_at": "2026-05-21T10:06:01.2897312Z",
+  "closed_at": "2026-05-21T10:06:01.2897312Z",
+  "closed_reason": "DealColumn now renders weighted total via computeWeightedTotal as primary, raw total exposed via title attribute. Typecheck + lint clean."
 }

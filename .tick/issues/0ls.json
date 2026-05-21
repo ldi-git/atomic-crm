@@ -2,7 +2,7 @@
   "id": "0ls",
   "title": "Create PR for iteration 2.1",
   "description": "## Objective\nOpen a PR from the feature branch into the base branch `s2-win-probability`.\n\n## Implementation\n1. All changes from Feature 2.1.A should already be on the feature branch `2.1-stage-probability` (worker should have committed per-task — verify with `git log s2-win-probability..HEAD --oneline`).\n2. Push the branch: `git push -u origin 2.1-stage-probability`.\n3. Open PR with gh CLI:\n   - Title: \"feat(deals): stage win probability + weighted column total\"\n   - Base: `s2-win-probability`\n   - Body: short summary + bulleted test plan.\n4. Wait for CI to pass before moving on. If CI fails, fix and push.\n\n## Tests\nPR is open and CI is green.",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "type": "task",
   "owner": "lars.dideriksen@geomatic.dk",
@@ -13,5 +13,7 @@
   "acceptance_criteria": "PR exists targeting s2-win-probability, CI green",
   "created_by": "lars.dideriksen@geomatic.dk",
   "created_at": "2026-05-21T09:59:22.0448079Z",
-  "updated_at": "2026-05-21T09:59:22.0448079Z"
+  "updated_at": "2026-05-21T10:10:24.8606126Z",
+  "closed_at": "2026-05-21T10:10:24.8606126Z",
+  "closed_reason": "PR #1 opened: https://github.com/ldi-git/atomic-crm/pull/1. Base s2-win-probability, head 2.1-stage-probability. Mergeable=true. No CI configured on this fork (statusCheckRollup empty)."
 }

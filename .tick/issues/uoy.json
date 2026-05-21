@@ -2,7 +2,7 @@
   "id": "uoy",
   "title": "Add Vitest tests for computeWeightedTotal",
   "description": "## Objective\nAdd Vitest unit tests for `computeWeightedTotal` covering five required cases: typical mid-stage, 0% (Lost) edge, 100% (Won) edge, empty array, single deal. These cases are required by increment 2-wpr's exit criteria — do not drop any.\n\n## Spec Reference\n`.devmeta/projects/2026-05-21-stage-probability/2026-05-21-stage-probability-spec.md` — Section: \"Test Strategy / Unit tests\"\n\n## Scope\n**Files:** `src/components/atomic-crm/deals/dealUtils.test.ts` — append a new `describe(\"computeWeightedTotal\", ...)` block alongside the existing tests. Do NOT modify existing tests.\n\n## Implementation\nAdd at the bottom of the file:\n```ts\nimport { computeWeightedTotal } from \"./dealUtils\";\n\ndescribe(\"computeWeightedTotal\", () =\u003e {\n  it(\"returns sum(amounts) * probability for a typical mid-stage probability\", () =\u003e {\n    expect(\n      computeWeightedTotal(\n        [{ amount: 1000 }, { amount: 2000 }, { amount: 5000 }],\n        0.5,\n      ),\n    ).toBe(4000);\n  });\n\n  it(\"returns 0 for any deals when probability is 0 (Lost stage)\", () =\u003e {\n    expect(\n      computeWeightedTotal(\n        [{ amount: 1000 }, { amount: 2000 }, { amount: 5000 }],\n        0,\n      ),\n    ).toBe(0);\n  });\n\n  it(\"returns sum(amounts) when probability is 1 (Won stage)\", () =\u003e {\n    expect(\n      computeWeightedTotal(\n        [{ amount: 1000 }, { amount: 2000 }, { amount: 5000 }],\n        1,\n      ),\n    ).toBe(8000);\n  });\n\n  it(\"returns 0 for an empty deals array regardless of probability\", () =\u003e {\n    expect(computeWeightedTotal([], 0.5)).toBe(0);\n    expect(computeWeightedTotal([], 1)).toBe(0);\n  });\n\n  it(\"returns amount * probability for a single deal\", () =\u003e {\n    expect(computeWeightedTotal([{ amount: 1234 }], 0.25)).toBe(308.5);\n  });\n});\n```\n\n(If `computeWeightedTotal` is already exported from dealUtils.ts there is no need to add the import twice — adjust if formatISODateString-style imports collide.)\n\n## Tests\nRun: `npx vitest run src/components/atomic-crm/deals/dealUtils.test.ts`\nDo NOT close until tests pass.",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "type": "task",
   "owner": "lars.dideriksen@geomatic.dk",
@@ -13,5 +13,7 @@
   "acceptance_criteria": "npx vitest run src/components/atomic-crm/deals/dealUtils.test.ts shows all 5 new tests passing (plus pre-existing formatISODateString tests still green)",
   "created_by": "lars.dideriksen@geomatic.dk",
   "created_at": "2026-05-21T09:58:44.4691834Z",
-  "updated_at": "2026-05-21T09:58:44.4691834Z"
+  "updated_at": "2026-05-21T10:05:02.3778894Z",
+  "closed_at": "2026-05-21T10:05:02.3778894Z",
+  "closed_reason": "5/5 new tests pass alongside existing tests. npx vitest run src/components/atomic-crm/deals/dealUtils.test.ts is green (9 total)."
 }
