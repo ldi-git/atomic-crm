@@ -1,9 +1,26 @@
 # Iteration 2.1 Status
 
 **Started:** 2026-05-21
-**Status:** In Progress
+**Completed:** 2026-05-21
+**Status:** Complete
 **Base branch:** `s2-win-probability`
-**Feature branch:** `2.1-stage-probability` (planned)
+**Feature branch:** `2.1-stage-probability` (merged via PR #1, deleted)
+
+## Summary
+
+Stage win probability landed as a required `DealStage.probability` field with agreed defaults, a pure `computeWeightedTotal` helper backed by five Vitest cases, and a Kanban column header that now displays the weighted pipeline value as the primary figure with the raw sum exposed on hover. 5 source files modified, +79/-18 lines. typecheck / eslint / 148-test vitest suite / production build all green.
+
+## Key Learnings
+
+- `make lint`'s prettier step has 400+ pre-existing failures across the repo on `main`; out of scope to fix inside a feature PR. Captured as a lesson.
+- Type widening from a `LabeledValue` alias to a proper interface produced exactly two predicted typecheck errors and no surprise consumers — a clean, low-blast-radius change.
+- Settings page's `ArrayInput` can introduce stage objects without `probability` at runtime; resolved with a defensive `Number.isFinite` guard in the helper (strict static type, tolerant runtime). Avoids loosening the type contract.
+
+## Changes to Project Docs
+
+- Updated `doc/src/content/docs/developers/customizing.mdx`: the `dealStages` example now includes the required `probability` field so customizer copy-paste doesn't fail typecheck.
+- Added to `.devmeta/lessons-learned.md`: `make lint` prettier debt.
+- Added to `.devmeta/project-history.md`: iteration 2.1 ship entry.
 
 ## Features
 

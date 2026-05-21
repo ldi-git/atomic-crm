@@ -38,10 +38,10 @@ const App = () => (
         ]}
         dealPipelineStatuses={['won']}
         dealStages={[
-            { value: 'opportunity', label: 'Opportunity' },
-            { value: 'proposal-sent', label: 'Proposal Sent' },
-            { value: 'won', label: 'Won' },
-            { value: 'lost', label: 'Lost' },
+            { value: 'opportunity', label: 'Opportunity', probability: 0.1 },
+            { value: 'proposal-sent', label: 'Proposal Sent', probability: 0.5 },
+            { value: 'won', label: 'Won', probability: 1 },
+            { value: 'lost', label: 'Lost', probability: 0 },
         ]}
         noteStatuses={[
             { value: 'cold', label: 'Cold', color: '#7dbde8' },
