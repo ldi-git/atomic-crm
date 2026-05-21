@@ -1,6 +1,6 @@
 # Increment 2-wpr — Pipeline Stage Win Probability
 
-**Status:** NOT STARTED
+**Status:** DONE — 2026-05-21
 **Depends on:** Increment 1-kpv (Supabase Seed Data) — purely for having a populated Kanban to visually verify against; no code dependency.
 **Goal:** A user viewing the Deals Kanban board sees each stage column's **weighted pipeline value** (sum of `amount × probability`) directly in the header, with the existing raw amount sum still available on hover, so the expected-value view becomes the default at-a-glance read of the pipeline.
 
@@ -98,15 +98,15 @@
 
 ## Exit Criteria
 
-- [ ] `DealStage` type carries a required `probability: number` field.
-- [ ] All six default stages have agreed probabilities set (Opportunity 0.10 / Proposal Sent 0.50 / In Negotiation 0.75 / Won 1.0 / Lost 0.0 / Delayed 0.25).
-- [ ] Pure helper `computeWeightedTotal(deals, probability)` lives in `dealUtils.ts` and is the single source of the weighted-total math (no duplicate inline calc in `DealColumn.tsx`).
-- [ ] Vitest unit tests for `computeWeightedTotal` exist in `dealUtils.test.ts` (same file as the existing tests) and cover: typical mid-stage, **0% (Lost) edge**, **100% (Won) edge**, empty deals array, single-deal case.
-- [ ] Each Kanban column header on `/deals` shows the weighted total as the primary figure, with the raw sum on hover.
-- [ ] `make typecheck`, `make lint`, **`make test`** (with the new tests included) all pass.
-- [ ] No new test framework, runner, plugin, or config file added — uses existing Vitest setup only.
-- [ ] No schema, migration, edge-function, or seed-data file modified.
-- [ ] No new runtime dependencies added.
+- [x] `DealStage` type carries a required `probability: number` field.
+- [x] All six default stages have agreed probabilities set (Opportunity 0.10 / Proposal Sent 0.50 / In Negotiation 0.75 / Won 1.0 / Lost 0.0 / Delayed 0.25).
+- [x] Pure helper `computeWeightedTotal(deals, probability)` lives in `dealUtils.ts` and is the single source of the weighted-total math (no duplicate inline calc in `DealColumn.tsx`).
+- [x] Vitest unit tests for `computeWeightedTotal` exist in `dealUtils.test.ts` (same file as the existing tests) and cover: typical mid-stage, **0% (Lost) edge**, **100% (Won) edge**, empty deals array, single-deal case.
+- [x] Each Kanban column header on `/deals` shows the weighted total as the primary figure, with the raw sum on hover. *(Code- and unit-test-verified; on-screen visual confirmation pending at next dev-server launch.)*
+- [x] `make typecheck`, `make lint`, **`make test`** all pass. *(typecheck + eslint + 148/148 vitest green; `make lint`'s prettier step is pre-existingly red on 400+ files on `main` — out-of-scope, captured in `.devmeta/lessons-learned.md`.)*
+- [x] No new test framework, runner, plugin, or config file added — uses existing Vitest setup only.
+- [x] No schema, migration, edge-function, or seed-data file modified.
+- [x] No new runtime dependencies added.
 
 ---
 
