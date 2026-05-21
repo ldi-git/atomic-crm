@@ -1,0 +1,15 @@
+{
+  "id": "odo",
+  "title": "Iteration 2.1R: Inspect \u0026 Adapt on Iteration 2.1, close increment 2-wpr",
+  "description": "I\u0026A cycle after 2.1 lands. Runs /devmeta:reflect 2.1 and closes increment 2-wpr (final iteration of the increment). Runs on base branch s2-win-probability after PR merge.",
+  "status": "open",
+  "priority": 2,
+  "type": "epic",
+  "owner": "lars.dideriksen@geomatic.dk",
+  "blocked_by": [
+    "1x7"
+  ],
+  "created_by": "lars.dideriksen@geomatic.dk",
+  "created_at": "2026-05-21T09:54:16.6119048Z",
+  "updated_at": "2026-05-21T09:54:16.6119048Z"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "32v",
+  "title": "Commit metadata to base branch (.tick/ and .devmeta/)",
+  "description": "## Objective\nAfter merge, .tick/ and .devmeta/ files modified during orchestration live on the base branch as uncommitted changes (they were never in the feature PR). Commit them directly on the base branch.\n\n## Implementation\n1. `git checkout s2-win-probability` (already there from previous task).\n2. `git status --short` — expect only metadata files (.tick/*, .devmeta/*, possibly tsconfig.tsbuildinfo).\n3. `git add .tick/ .devmeta/` (and tsconfig.tsbuildinfo if present).\n4. `git status --short` — verify ONLY metadata staged.\n5. `git commit -m \\\"DevMeta: metadata snapshot after iteration 2.1\\\"`\n6. `git push`.\n\n## Tests\n`git status` returns clean tree.",
+  "status": "open",
+  "priority": 2,
+  "type": "task",
+  "owner": "lars.dideriksen@geomatic.dk",
+  "blocked_by": [
+    "n9x"
+  ],
+  "parent": "1x7",
+  "acceptance_criteria": "git status clean on s2-win-probability after metadata commit",
+  "created_by": "lars.dideriksen@geomatic.dk",
+  "created_at": "2026-05-21T09:59:36.0999564Z",
+  "updated_at": "2026-05-21T09:59:36.0999564Z"
+}

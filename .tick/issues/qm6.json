@@ -2,12 +2,14 @@
   "id": "qm6",
   "title": "1.1: Bootstrap seeder + Makefile",
   "description": "## Scope\nSingle feature for iteration 1.1. Adds tsx + @supabase/supabase-js as devDeps, creates scripts/seed-supabase.ts with local-URL guard + clean-DB precondition + smoke-test insert, adds make seed target. No CRM data, no auth users yet.\n\n## Spec\n.devmeta/projects/2026-05-21-seeder-scaffold/2026-05-21-seeder-scaffold-spec.md\n\n## Worker Instructions\n- Complete tasks in order\n- Read .devmeta/projects/2026-05-21-seeder-scaffold/context-log.md before starting\n- Read .devmeta/lessons-learned.md before starting\n- Append learnings to context-log.md when done",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "type": "epic",
   "owner": "lars.dideriksen@geomatic.dk",
   "parent": "5xi",
   "created_by": "lars.dideriksen@geomatic.dk",
   "created_at": "2026-05-21T09:02:55.7317399Z",
-  "updated_at": "2026-05-21T09:02:55.7317399Z"
+  "updated_at": "2026-05-21T09:53:26.2180486Z",
+  "closed_at": "2026-05-21T09:53:26.2180486Z",
+  "closed_reason": "closed with parent epic (--force)"
 }

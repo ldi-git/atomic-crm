@@ -1,0 +1,17 @@
+{
+  "id": "n9x",
+  "title": "Merge PR and return to base branch",
+  "description": "## Objective\nMerge the iteration 2.1 PR with --merge (NOT squash, NOT rebase) and return to the base branch s2-win-probability.\n\n## Implementation\n1. `gh pr merge --merge` (only after CI is green).\n2. `git checkout s2-win-probability \u0026\u0026 git pull`.\n3. `git log -1` — confirm the merge commit landed.\n\n## Tests\nMerge commit on s2-win-probability; feature branch optionally deleted.",
+  "status": "open",
+  "priority": 2,
+  "type": "task",
+  "owner": "lars.dideriksen@geomatic.dk",
+  "blocked_by": [
+    "0ls"
+  ],
+  "parent": "1x7",
+  "acceptance_criteria": "PR merged via --merge, local s2-win-probability up to date",
+  "created_by": "lars.dideriksen@geomatic.dk",
+  "created_at": "2026-05-21T09:59:27.8618036Z",
+  "updated_at": "2026-05-21T09:59:27.8618036Z"
+}

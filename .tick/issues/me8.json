@@ -2,7 +2,7 @@
   "id": "me8",
   "title": "Commit metadata to course-main",
   "description": "## Objective\n.tick/ and .devmeta/ files have been modified on course-main during this iteration's orchestration but weren't part of the feature PR. Commit them now.\n\n## Implementation\n1. git status --short — confirm only .tick/, .devmeta/, and possibly tsconfig.tsbuildinfo are dirty\n2. git add .tick/ .devmeta/ tsconfig.tsbuildinfo (only if dirty)\n3. git status --short again — verify only metadata staged\n4. git commit -m 'Update .tick/ and .devmeta/ metadata for iteration 1.1'\n5. git push\n\n## Tests\ngit status — should be clean after push.\nDo NOT close until working tree is clean and pushed.",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "type": "task",
   "owner": "lars.dideriksen@geomatic.dk",
@@ -13,5 +13,7 @@
   "acceptance_criteria": "Working tree clean, metadata commit pushed to course-main",
   "created_by": "lars.dideriksen@geomatic.dk",
   "created_at": "2026-05-21T09:04:17.6744491Z",
-  "updated_at": "2026-05-21T09:04:17.6744491Z"
+  "updated_at": "2026-05-21T09:53:26.2180486Z",
+  "closed_at": "2026-05-21T09:53:26.2180486Z",
+  "closed_reason": "closed with parent epic (--force)"
 }

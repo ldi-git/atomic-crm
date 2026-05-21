@@ -2,7 +2,7 @@
   "id": "1bl",
   "title": "Plan Iteration 1.2: read scope, create feature tick structure, begin first task",
   "description": "## Objective\nReal work for the next iteration, not a handoff. By the end of this task the first concrete task of iteration 1.2 should be in flight.\n\n## Implementation\n1. Read .devmeta/increments/increment-1-kpv/_overview.md, section 'Iteration 1.2'\n2. Invoke skill: /devmeta:plan-iteration 1.2\n3. The skill will: create iteration 1.2 plan.md and status.md, create feature spec + context-log under .devmeta/projects/, create feature epic + tasks under iteration 1.2 (id 3a3) in tk, then immediately tk next and start executing\n4. Do not stop at the planning boundary — continue into the first task of 1.2\n\n## Tests\ntk list --parent 3a3 — feature epic with tasks present.\nDo NOT close until the first task of 1.2 is in flight (or the structure is in place and tk next returns it).",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "type": "task",
   "owner": "lars.dideriksen@geomatic.dk",
@@ -13,5 +13,7 @@
   "acceptance_criteria": "Iteration 1.2 feature/tasks created in tk and first task is in flight",
   "created_by": "lars.dideriksen@geomatic.dk",
   "created_at": "2026-05-21T09:04:40.8281004Z",
-  "updated_at": "2026-05-21T09:04:40.8281004Z"
+  "updated_at": "2026-05-21T09:53:30.64886Z",
+  "closed_at": "2026-05-21T09:53:30.64886Z",
+  "closed_reason": "closed with parent epic (--force)"
 }

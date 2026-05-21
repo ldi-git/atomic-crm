@@ -2,7 +2,7 @@
   "id": "ccq",
   "title": "Create PR for iteration 1.1",
   "description": "## Objective\nBranch + commit + PR for the iteration's work.\n\n## Implementation\n1. Create feature branch from course-main: git checkout -b 2026-05-21-iter-1.1-seeder-scaffold\n2. Stage the changes: git add package.json package-lock.json scripts/seed-supabase.ts Makefile\n3. Commit with a clear message (NEW commit, not amend)\n4. Push with -u origin\n5. gh pr create targeting course-main with title 'iter-1.1: Supabase seeder scaffold + make seed target' and a brief Summary + Test plan body\n6. Capture the PR URL — paste it in the tk note on this task\n\n## Tests\nAfter pushing: gh pr checks \u003cPR#\u003e — wait for CI to be green\nDo NOT close until CI is green.",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "type": "task",
   "owner": "lars.dideriksen@geomatic.dk",
@@ -13,5 +13,7 @@
   "acceptance_criteria": "PR open, CI green, URL noted on this task",
   "created_by": "lars.dideriksen@geomatic.dk",
   "created_at": "2026-05-21T09:04:04.0940373Z",
-  "updated_at": "2026-05-21T09:04:04.0940373Z"
+  "updated_at": "2026-05-21T09:53:26.2180486Z",
+  "closed_at": "2026-05-21T09:53:26.2180486Z",
+  "closed_reason": "closed with parent epic (--force)"
 }

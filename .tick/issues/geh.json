@@ -1,0 +1,17 @@
+{
+  "id": "geh",
+  "title": "Run full quality gates: lint + typecheck + test",
+  "description": "## Objective\nRun the iteration-wide quality gates and fix any failures before declaring the feature done.\n\n## Scope\nNo file modifications expected. If a check fails, fix the offending file and re-run.\n\n## Implementation\nRun in order:\n1. `make typecheck` — green\n2. `make lint` — green (includes prettier --check; if prettier complains, run `npx prettier --write \u003cfiles\u003e` on the files this iteration touched)\n3. `make test` — green (full vitest suite; the new computeWeightedTotal tests must be included)\n\n## Tests\nThe check IS the test. Loop fix → re-run until all three are green. Do NOT close while any check is red.",
+  "status": "open",
+  "priority": 2,
+  "type": "task",
+  "owner": "lars.dideriksen@geomatic.dk",
+  "blocked_by": [
+    "6tu"
+  ],
+  "parent": "2z4",
+  "acceptance_criteria": "All three of make typecheck, make lint, make test are green",
+  "created_by": "lars.dideriksen@geomatic.dk",
+  "created_at": "2026-05-21T09:59:03.8033271Z",
+  "updated_at": "2026-05-21T09:59:03.8033271Z"
+}

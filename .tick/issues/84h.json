@@ -1,0 +1,17 @@
+{
+  "id": "84h",
+  "title": "Close increment 2-wpr",
+  "description": "## Objective\nThis is the final iteration of increment 2-wpr; the I\u0026A cycle's last task closes the increment rather than handing off to a next iteration.\n\n## Implementation\n1. Verify exit criteria in `.devmeta/increments/increment-2-wpr/_overview.md` are all met (each checkbox).\n2. Edit `_overview.md`: change `**Status:** NOT STARTED` (or `In Progress`) to `**Status:** DONE — 2026-MM-DD`. Mark exit-criteria checkboxes [x].\n3. Update `.devmeta/current-increment.md`: move increment 2-wpr from Active to History with final status; clear or set Active to TBD (user will start the next increment via /devmeta:start-increment-spec).\n4. Stage and commit on `s2-win-probability`: `git add .devmeta/increments/increment-2-wpr/_overview.md .devmeta/current-increment.md \u0026\u0026 git commit -m \\\"DevMeta: close increment 2-wpr (Pipeline Stage Win Probability)\\\" \u0026\u0026 git push`.\n\n## Tests\nIncrement 2-wpr marked DONE in both files; commit pushed; tk list shows nothing ready next.",
+  "status": "open",
+  "priority": 2,
+  "type": "task",
+  "owner": "lars.dideriksen@geomatic.dk",
+  "blocked_by": [
+    "498"
+  ],
+  "parent": "odo",
+  "acceptance_criteria": "_overview.md status=DONE, current-increment.md History updated, commit pushed",
+  "created_by": "lars.dideriksen@geomatic.dk",
+  "created_at": "2026-05-21T10:00:05.6686948Z",
+  "updated_at": "2026-05-21T10:00:05.6686948Z"
+}

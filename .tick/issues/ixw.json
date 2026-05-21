@@ -1,0 +1,17 @@
+{
+  "id": "ixw",
+  "title": "Kick off I\u0026A Cycle 2.1R",
+  "description": "## Objective\nMarker task. Closing this task closes iteration 2.1 and unblocks iteration 2.1R (which contains the actual reflection work).\n\n## Implementation\n1. Verify all sibling tasks under parent 1x7 are closed: `tk list --parent 1x7`.\n2. Close this task — iteration 2.1 epic should auto-close (or close it manually with `tk close 1x7`).\n3. Next iteration (2.1R) becomes ready.\n\n## Tests\n`tk next` returns the first task of iteration 2.1R after closing this task.",
+  "status": "open",
+  "priority": 2,
+  "type": "task",
+  "owner": "lars.dideriksen@geomatic.dk",
+  "blocked_by": [
+    "32v"
+  ],
+  "parent": "1x7",
+  "acceptance_criteria": "Iteration 2.1 closed, iteration 2.1R ready",
+  "created_by": "lars.dideriksen@geomatic.dk",
+  "created_at": "2026-05-21T09:59:45.6083281Z",
+  "updated_at": "2026-05-21T09:59:45.6083281Z"
+}

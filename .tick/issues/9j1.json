@@ -1,0 +1,14 @@
+{
+  "id": "9j1",
+  "title": "Extend DealStage type with required probability field",
+  "description": "## Objective\nReplace the type alias `type DealStage = LabeledValue` with an interface that extends LabeledValue and adds a required `probability: number` (fraction 0..1). This is the foundation — every subsequent task depends on it.\n\n## Spec Reference\n`.devmeta/projects/2026-05-21-stage-probability/2026-05-21-stage-probability-spec.md` — Section: \"Type design\"\n\n## Scope\n**Files:** `src/components/atomic-crm/types.ts` — modify the DealStage definition only.\n\n## Implementation\n1. Locate the existing `export type DealStage = LabeledValue;` (around line 218).\n2. Replace with: `export interface DealStage extends LabeledValue { probability: number; }`.\n3. No other type changes.\n\n## Tests\nRun: `npm run typecheck`\nExpected: this task alone will produce typecheck failures in defaultConfiguration.ts (defaults missing probability). That is intentional and gets fixed by the next task. The task is complete when types.ts compiles in isolation; downstream errors are NOT a reason to keep this task open.",
+  "status": "open",
+  "priority": 2,
+  "type": "task",
+  "owner": "lars.dideriksen@geomatic.dk",
+  "parent": "2z4",
+  "acceptance_criteria": "types.ts contains `interface DealStage extends LabeledValue { probability: number; }`",
+  "created_by": "lars.dideriksen@geomatic.dk",
+  "created_at": "2026-05-21T09:58:12.0409841Z",
+  "updated_at": "2026-05-21T09:58:12.0409841Z"
+}

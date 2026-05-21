@@ -1,0 +1,17 @@
+{
+  "id": "bmn",
+  "title": "Re-ground after Feature 2.1.A",
+  "description": "## Objective\nCapture what was built, update living docs, and orient for the next step.\n\n## Implementation\n1. Append an entry to `.devmeta/project-history.md` (create the file if it does not exist) summarising Feature 2.1.A: what shipped, file footprint, any unexpected findings.\n2. Update `.devmeta/increments/increment-2-wpr/iterations/iteration-2.1/status.md` — set Feature 2.1.A status to Done.\n3. If anything surprising or worth-remembering surfaced (gotcha, pattern), append an entry to `.devmeta/lessons-learned.md`.\n4. Append a worker section to `.devmeta/projects/2026-05-21-stage-probability/context-log.md` summarising what you encountered.\n5. Run `tk list --parent 1x7` to see where you are in the iteration.\n\n## Tests\nn/a — documentation update.",
+  "status": "open",
+  "priority": 2,
+  "type": "task",
+  "owner": "lars.dideriksen@geomatic.dk",
+  "blocked_by": [
+    "geh"
+  ],
+  "parent": "2z4",
+  "acceptance_criteria": "project-history.md and iteration status.md updated; context-log appended",
+  "created_by": "lars.dideriksen@geomatic.dk",
+  "created_at": "2026-05-21T09:59:12.8635671Z",
+  "updated_at": "2026-05-21T09:59:12.8635671Z"
+}

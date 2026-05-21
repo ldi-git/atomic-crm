@@ -2,7 +2,7 @@
   "id": "3a3",
   "title": "Iteration 1.2: Auth users + sales reps",
   "description": "Create demo@atomic.dev / demodemo123 + all generated sales reps via Supabase Auth Admin API (all share demodemo123). Trigger fills sales rows; seeder UPDATEs administrator/avatar. Reassign one rep to the demo auth user so demo user owns records. Verify login works in browser. See .devmeta/increments/increment-1-kpv/_overview.md.",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "type": "epic",
   "owner": "lars.dideriksen@geomatic.dk",
@@ -11,5 +11,7 @@
   ],
   "created_by": "lars.dideriksen@geomatic.dk",
   "created_at": "2026-05-21T08:59:58.3968679Z",
-  "updated_at": "2026-05-21T08:59:58.3968679Z"
+  "updated_at": "2026-05-21T09:53:30.787387Z",
+  "closed_at": "2026-05-21T09:53:30.787387Z",
+  "closed_reason": "Deferred — see 5xi"
 }

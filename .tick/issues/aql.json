@@ -2,7 +2,7 @@
   "id": "aql",
   "title": "Re-ground after Feature 1.1.A",
   "description": "## Objective\nClose-out housekeeping for the feature.\n\n## Implementation\n1. Update .devmeta/project-history.md with an entry: what was built, files touched, anything surprising\n2. Update .devmeta/increments/increment-1-kpv/iterations/iteration-1.1/status.md to mark Feature 1.1.A as complete\n3. Append any lessons learned to .devmeta/lessons-learned.md (especially if supabase status JSON shape surprised us, or if any of the negative paths needed extra work)\n4. Append a short section to .devmeta/projects/2026-05-21-seeder-scaffold/context-log.md summarising what landed and any patterns the next iteration's worker should know\n5. Run tk list --parent 5xi to confirm only iteration-level wrap-up tasks remain\n\n## Tests\nNone — bookkeeping task.\nDo NOT close until all four files are updated.",
-  "status": "open",
+  "status": "closed",
   "priority": 2,
   "type": "task",
   "owner": "lars.dideriksen@geomatic.dk",
@@ -13,5 +13,7 @@
   "acceptance_criteria": "project-history.md, status.md, lessons-learned.md, and context-log.md all updated",
   "created_by": "lars.dideriksen@geomatic.dk",
   "created_at": "2026-05-21T09:03:55.3400067Z",
-  "updated_at": "2026-05-21T09:03:55.3400067Z"
+  "updated_at": "2026-05-21T09:53:41.7806059Z",
+  "closed_at": "2026-05-21T09:53:41.7806059Z",
+  "closed_reason": "Deferred — see 5xi"
 }
