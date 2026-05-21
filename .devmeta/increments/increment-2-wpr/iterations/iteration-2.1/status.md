@@ -9,7 +9,7 @@
 
 | Feature | tk ID | Tasks | Status | Depends On |
 |---------|-------|-------|--------|-----------|
-| 2.1.A — Stage probability + weighted column total | `2z4` | 7 | In Progress | — |
+| 2.1.A — Stage probability + weighted column total | `2z4` | 7 | Done — 2026-05-21 | — |
 
 Iteration epic: `1x7` · I&A cycle epic: `odo`
 
