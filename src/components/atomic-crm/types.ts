@@ -215,7 +215,9 @@ export interface LabeledValue {
   label: string;
 }
 
-export type DealStage = LabeledValue;
+export interface DealStage extends LabeledValue {
+  probability: number;
+}
 
 export interface NoteStatus extends LabeledValue {
   color: string;

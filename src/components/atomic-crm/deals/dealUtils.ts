@@ -50,3 +50,14 @@ export function formatISODateString(dateString: string) {
 
   return format(date, "PP");
 }
+
+// Settings-edited stages can reach this helper at runtime without a probability,
+// so any non-finite value is coerced to 0 — strict type contract, tolerant runtime.
+export function computeWeightedTotal(
+  deals: { amount: number }[],
+  probability: number,
+): number {
+  const safeProbability = Number.isFinite(probability) ? probability : 0;
+  const totalAmount = deals.reduce((sum, deal) => sum + deal.amount, 0);
+  return totalAmount * safeProbability;
+}

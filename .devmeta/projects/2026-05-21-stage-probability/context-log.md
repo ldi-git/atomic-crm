@@ -35,4 +35,15 @@ Discussed alternatives: shadcn `Tooltip` primitive, two-line layout, click-to-to
 
 ## Worker sections (append as you finish)
 
-<!-- worker: append a heading and notes here when done -->
+## 2026-05-21 — Feature 2.1.A implementation notes
+
+**Type widening was painless.** Promoting `DealStage` from `type DealStage = LabeledValue` to `interface DealStage extends LabeledValue { probability: number }` produced exactly two typecheck errors, both in expected locations (`defaultConfiguration.ts` and `CRM.tsx`'s prop default which echoes `defaultDealStages`). No surprise consumers.
+
+**Defensive runtime worked as designed.** `computeWeightedTotal` uses `Number.isFinite(probability) ? probability : 0`. Tests do not currently cover the NaN/undefined runtime path (the helper's parameter is typed as `number`, so feeding it NaN would itself be a type-level lie). The guard exists for the form-edit path described in the context-log header — not for callers obeying the type contract.
+
+**Currency formatter centralised.** Extracted the existing `toLocaleString` call into a local `formatCurrency` helper inside `DealColumn` rather than duplicating it for weighted and raw. Same options, same output — just two call sites now share one definition.
+
+**Pre-existing prettier debt.** `make lint`'s prettier step finds 400+ pre-existing formatting issues across the repo (true on `main` too). Captured in `.devmeta/lessons-learned.md`. Iteration's effective gates: typecheck + eslint + vitest.
+
+**Commit cadence:** one commit per task (5 feat/test commits on the feature branch). Pre-commit hook auto-runs `registry:gen` and `prettier --write` on touched files, so commit-time CRLF warnings appeared but didn't change content.
+
